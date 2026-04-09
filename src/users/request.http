@@ -1,0 +1,26 @@
+### Create a new user
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "email": "ken@gmai.com",
+    "password": "ken123"
+}
+
+### Get all users with a given email
+GET http://localhost:3000/auth?email=ken@gmai.com
+
+### Get a user
+GET http://localhost:3000/auth/2
+
+### Update a user
+PATCH http://localhost:3000/auth/2
+Content-Type: application/json
+
+{
+    "password": "ken123"
+}
+
+### Delete a user
+DELETE http://localhost:3000/auth/1
+
