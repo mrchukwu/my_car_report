@@ -1,9 +1,10 @@
+### Sign up
 POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-    "email": "smith@gmai.com",
-    "password": "smith123"
+    "email": "test@test.com",
+    "password": "12345"
 }
 
 ### Sign in
@@ -11,9 +12,15 @@ POST http://localhost:3000/auth/signin
 Content-Type: application/json
 
 {
-    "email": "smith@gmai.com",
-    "password": "smith123"
+    "email": "test@test.com",
+    "password": "12345"
 }
+
+### Who am I
+GET http://localhost:3000/auth/whoami
+
+### Sign out
+POST http://localhost:3000/auth/signout
 
 ### Get all users with a given email
 GET http://localhost:3000/auth?email=smith@gmai.com
@@ -31,4 +38,10 @@ Content-Type: application/json
 
 ### Delete a user
 DELETE http://localhost:3000/auth/1
+
+# ### Set color
+# GET http://localhost:3000/auth/colors/red
+
+# ### Get color
+# GET http://localhost:3000/auth/colors
 
