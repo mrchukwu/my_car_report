@@ -1,24 +1,32 @@
-### Create a new user
 POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-    "email": "ken@gmai.com",
-    "password": "ken123"
+    "email": "smith@gmai.com",
+    "password": "smith123"
 }
 
-### Get all users with a given email
-GET http://localhost:3000/auth?email=ken@gmai.com
-
-### Get a user
-GET http://localhost:3000/auth/2
-
-### Update a user
-PATCH http://localhost:3000/auth/2
+### Sign in
+POST http://localhost:3000/auth/signin
 Content-Type: application/json
 
 {
-    "password": "ken123"
+    "email": "smith@gmai.com",
+    "password": "smith123"
+}
+
+### Get all users with a given email
+GET http://localhost:3000/auth?email=smith@gmai.com
+
+### Get a user
+GET http://localhost:3000/auth/3
+
+### Update a user
+PATCH http://localhost:3000/auth/3
+Content-Type: application/json
+
+{
+    "password": "smith123"
 }
 
 ### Delete a user
